@@ -76,6 +76,38 @@ h3 {
   font-size: var(--font-size-h3);
 }
 
+summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  width: 0;
+  height: 0;
+  border-top: 0.45em solid currentColor;
+  border-right: 0.35em solid transparent;
+  border-left: 0.35em solid transparent;
+  content: "";
+  flex: 0 0 auto;
+  transition: transform 160ms ease;
+}
+
+details[open] > summary::before {
+  transform: rotate(180deg);
+}
+
+.work-title {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+}
+
 
 /*
   ============================================================
