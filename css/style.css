@@ -8,11 +8,13 @@
 */
 
 :root {
-  --color-background: #f4f4f0;
-  --color-text: #171717;
-  --color-accent: #5b3df5;
+  --color-background: #15192e;
+  --color-text: #ece9e9;
+  --color-accent: #78afff;
+  --hover-color: #990000; 
 
   --font-family-base: system-ui, Arial, Helvetica, sans-serif;
+  
 
   --font-size-body: 1rem;
   --font-size-h1: 3rem;
@@ -34,7 +36,7 @@
     Regla temporal para visualizar las cajas.
     Puede eliminarse cuando ya no sea necesaria.
   */
-  outline: 1px solid;
+  outline: 0px solid;
 }
 
 
