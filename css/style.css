@@ -6,20 +6,20 @@
   Variables reutilizables para mantener un sistema visual
   consistente en todo el documento.
 */
-
+@import url("https://use.typekit.net/xja6xpa.css");
 :root {
   --color-background: #15192e;
   --color-text: #ece9e9;
   --color-accent: #78afff;
-  --hover-color: #990000; 
-
-  --font-family-base: system-ui, Arial, Helvetica, sans-serif;
-  
-
+  --hover-color: #990000;
+  --font-family-base: "lexia-mono", serif;
+  --font-family-display: "alternate-gothic-atf", sans-serif;
+  --peso-display: 600;
   --font-size-body: 1rem;
-  --font-size-h1: 3rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.25rem;
+  --font-size-h1: 11vw;
+  --font-size-h2: 5rem;
+  --font-size-h3: 2rem;
+  --font-size-small: 2rem;
 }
 
 /*
@@ -52,10 +52,20 @@ body {
 
   background-color: var(--color-background);
   color: var(--color-text);
-
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-display);
   font-size: var(--font-size-body);
 }
+small {
+  font-size: var(--font-size-small);
+  display: block;
+  opacity: 0.5;
+  line-height: 1em;
+  margin-bottom: 2em;
+  margin/border: 1em;
+  margin/border: 1e;
+  margin/border: 1;
+}
+
 
 /*
   ============================================================
@@ -68,21 +78,49 @@ body {
 
 h1 {
   font-size: var(--font-size-h1);
+  line-height: 1em;
+  margin-bottom: 0;
 }
 
 h2 {
   font-size: var(--font-size-h2);
+  margin-top: 0;
+  line-height: .9em;
+  margin-bottom: 0;
 }
 
 h3 {
   font-size: var(--font-size-h3);
 }
 
+p {
+  font-family: var(--font-family-base);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.hero {
+  padding: rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.hero p {
+  opacity: .7;
+}
+
+.hero h1 + p{
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  line-height: 1em;
+  margin-bottom: 1rem;
+}
 summary {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
   list-style: none;
 }
 
@@ -121,6 +159,7 @@ details[open] > summary::before {
 
 a {
   color: var(--color-accent);
+  font-family: var(--font-family-base);
 }
 
 
@@ -163,6 +202,20 @@ section {
   margin-bottom: 3rem;
 }
 
-nav a {
-  margin-right: 1rem;
+a {
+  text-decoration: none;
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+a:hover {
+  color: var(--color-text);
+  background-color: var(--hover-color);
+}
+
+.about-link {
+  background-color: none;
+
 }
