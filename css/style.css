@@ -60,7 +60,7 @@ small {
   display: block;
   opacity: 0.5;
   line-height: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   margin/border: 1em;
   margin/border: 1e;
   margin/border: 1;
@@ -86,7 +86,7 @@ h2 {
   font-size: var(--font-size-h2);
   margin-top: 0;
   line-height: .9em;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -99,9 +99,17 @@ p {
   margin-bottom: 1.5rem;
 }
 
+li {
+  font-family: var(--font-family-base);
+ font-size: var(--font-size-body);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
 .hero {
   padding: rem;
   width: 95%;
+  height:100vh;
   margin: 0 auto;
 }
 
@@ -185,6 +193,9 @@ main {
   margin: 0 auto;
 }
 
+.genero {
+  margin-bottom: 1rem;
+}
 
 /*
   ============================================================
@@ -208,6 +219,8 @@ a {
   background-color: var(--color-accent);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  margin: 1rem 0;
+  display: inline-block;
 }
 
 a:hover {
@@ -218,4 +231,9 @@ a:hover {
 .about-link {
   background-color: none;
 
+}
+
+.der-about {
+ float:right;
+ margin: 0;
 }
