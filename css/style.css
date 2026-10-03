@@ -7,14 +7,14 @@
   consistente en todo el documento.
 */
 @import url("https://use.typekit.net/xja6xpa.css");
+
 :root {
   --color-background: #15192e;
   --color-text: #ece9e9;
   --color-accent: #78afff;
-  --hover-color: #990000;
+  --color-hover: #990000;
   --font-family-base: "lexia-mono", serif;
   --font-family-display: "alternate-gothic-atf", sans-serif;
-  --peso-display: 600;
   --font-size-body: 1rem;
   --font-size-h1: 11vw;
   --font-size-h2: 5rem;
@@ -29,16 +29,9 @@
   * funciona como un comodín.
   Selecciona todos los elementos HTML.
 */
-
 * {
   box-sizing: border-box;
-  /*
-    Regla temporal para visualizar las cajas.
-    Puede eliminarse cuando ya no sea necesaria.
-  */
-  outline: 0px solid;
 }
-
 
 /*
   ============================================================
@@ -49,127 +42,11 @@
 */
 body {
   margin: 0;
-
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family-display);
   font-size: var(--font-size-body);
 }
-small {
-  font-size: var(--font-size-small);
-  display: block;
-  opacity: 0.5;
-  line-height: 1em;
-  margin-bottom: 1em;
-  margin/border: 1em;
-  margin/border: 1e;
-  margin/border: 1;
-}
-
-
-/*
-  ============================================================
-  JERARQUÍA TIPOGRÁFICA
-  ============================================================
-
-  HTML define la jerarquía.
-  CSS controla su representación visual.
-*/
-
-h1 {
-  font-size: var(--font-size-h1);
-  line-height: 1em;
-  margin-bottom: 0;
-}
-
-h2 {
-  font-size: var(--font-size-h2);
-  margin-top: 0;
-  line-height: .9em;
-  margin-bottom: 2rem;
-}
-
-h3 {
-  font-size: var(--font-size-h3);
-}
-
-p {
-  font-family: var(--font-family-base);
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-li {
-  font-family: var(--font-family-base);
- font-size: var(--font-size-body);
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-.hero {
-  padding: rem;
-  width: 95%;
-  height:100vh;
-  margin: 0 auto;
-}
-
-.hero p {
-  opacity: .7;
-}
-
-.hero h1 + p{
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-h2);
-  font-weight: 600;
-  line-height: 1em;
-  margin-bottom: 1rem;
-}
-summary {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary::before {
-  width: 0;
-  height: 0;
-  border-top: 0.45em solid currentColor;
-  border-right: 0.35em solid transparent;
-  border-left: 0.35em solid transparent;
-  content: "";
-  flex: 0 0 auto;
-  transition: transform 160ms ease;
-}
-
-details[open] > summary::before {
-  transform: rotate(180deg);
-}
-
-.work-title {
-  font-size: var(--font-size-h3);
-  font-weight: 700;
-}
-
-
-/*
-  ============================================================
-  LINKS
-  ============================================================
-
-  El color de acento identifica enlaces y acciones.
-*/
-
-a {
-  color: var(--color-accent);
-  font-family: var(--font-family-base);
-}
-
 
 /*
   ============================================================
@@ -185,7 +62,6 @@ a {
   margin: 0 auto:
   distribuye el espacio horizontal y centra la caja.
 */
-
 main {
   width: 65%;
   min-width: 290px;
@@ -193,16 +69,11 @@ main {
   margin: 0 auto;
 }
 
-.genero {
-  margin-bottom: 1rem;
-}
-
 /*
   ============================================================
   ESPACIADO BÁSICO
   ============================================================
 */
-
 header,
 main,
 footer {
@@ -213,27 +84,173 @@ section {
   margin-bottom: 3rem;
 }
 
+/*
+  ============================================================
+  JERARQUÍA TIPOGRÁFICA
+  ============================================================
+
+  HTML define la jerarquía.
+  CSS controla su representación visual.
+*/
+
+
+.hero {
+  width: 95%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.hero p {
+  opacity: 0.7;
+}
+
+
+
+.hero h1 + p {
+  margin-bottom: 1rem;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  line-height: 1em;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: var(--font-size-h1);
+  line-height: 1em;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: var(--font-size-h2);
+  line-height: 0.9em;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+.top {
+  margin-bottom: 8rem;
+}
+
+.tiburones {
+  display: block;
+  width: 50vw;
+  margin-bottom: 2rem;
+}
+
+#dientes {
+  position: relative;
+  min-height: 100vh;
+}
+
+#dientes img {
+  position: absolute;
+  width: 70vw;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+#dientes h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.tiburones-top {
+  display: line-block;
+  width: 60vw;
+ float: right;
+
+
+}
+
+p,
+li {
+  font-family: var(--font-family-base);
+  line-height: 1.5;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 1rem;
+  font-size: var(--font-size-body);
+}
+
+small {
+  display: block;
+  margin-bottom: 1em;
+  font-size: var(--font-size-small);
+  line-height: 1em;
+  opacity: 0.5;
+}
+
+.genero {
+  margin-bottom: 1rem;
+}
+
+.work-title {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  flex: 0 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 0.45em solid currentColor;
+  border-right: 0.35em solid transparent;
+  border-left: 0.35em solid transparent;
+  content: "";
+  transition: transform 160ms ease;
+}
+
+details[open] > summary::before {
+  transform: rotate(180deg);
+}
+
+/*
+  ============================================================
+  LINKS
+  ============================================================
+
+  El color de acento identifica enlaces y acciones.
+*/
 a {
-  text-decoration: none;
-  color: var(--color-background);
-  background-color: var(--color-accent);
+  display: inline-block;
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  margin: 1rem 0;
-  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  font-family: var(--font-family-base);
+  text-decoration: none;
 }
 
 a:hover {
+  background-color: var(--color-hover);
   color: var(--color-text);
-  background-color: var(--hover-color);
-}
-
-.about-link {
-  background-color: none;
-
 }
 
 .der-about {
- float:right;
- margin: 0;
+  float: right;
+  margin: 0;
 }
